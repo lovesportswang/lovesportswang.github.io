@@ -49,157 +49,39 @@ extra:
 
 # [Navigtion]
 nav:
-  - 讲稿: 
-    - LECTURE/index.md 
-    - Linux: 
-      - Linux讲座: LECTURE/Linux/linux.md
-      - 命令行入门精简版: LECTURE/Linux/commands-concise.md
-    - Markdown: 
-      - Markdown讲座: LECTURE/Markdown/markdown.md
-      - VSCode及插件安装: LECTURE/Markdown/vscode-extension.md
-    - Git: 
-      - Git: LECTURE/Git/git.md
-      - Git例子: LECTURE/Git/git-demos.md
-      - Git合作: LECTURE/Git/git-teamwork.md
-      - Windows安装Git: LECTURE/Git/windows-install.md
   - 博客:
-    - BLOG/index.md
+    - bolg/index.md
     - Linux:
-      - vim: BLOG/Linux/vim.md
-      - tmux: BLOG/Linux/tmux.md
-      - UNIX: BLOG/Linux/unix.md
-      - 内核编译: BLOG/Linux/kernel-compile.md
-      - 连接树莓派: BLOG/Linux/pi-start.md
+      - vim: bolg/Linux/vim.md
+      - tmux: bolg/Linux/tmux.md
+      - UNIX: bolg/Linux/unix.md
+      - 内核编译: bolg/Linux/kernel-compile.md
+      - 连接树莓派: bolg/Linux/pi-start.md
     - GitHub:
-      - 镜像到Gitee: BLOG/GitHub/mirror.md
+      - 镜像到Gitee: bolg/GitHub/mirror.md
     - Markdown:
-      - Markdown语法初学习: BLOG/Markdown/grammars.md
-      - TODO ExMark规范: BLOG/Markdown/ExMark-spec-zh.txt
-      - MkDocs静态网站构建: BLOG/Markdown/mkdocs-site.md
-      - mdBook静态网站构建: BLOG/Markdown/mdbook-site.md
-      - GitHub Pages简介: BLOG/Markdown/github-pages.md
+      - Markdown语法初学习: bolg/Markdown/grammars.md
+      - TODO ExMark规范: bolg/Markdown/ExMark-spec-zh.txt
+      - MkDocs静态网站构建: bolg/Markdown/mkdocs-site.md
+      - mdBook静态网站构建: bolg/Markdown/mdbook-site.md
+      - GitHub Pages简介: bolg/Markdown/github-pages.md
   - 开发:
-    - DEV/index.md
+    - dev/index.md
     - 编程:
-      - 推荐的学习路线: DEV/Programming/recommendation.md
-      - 我对编程语言的感受: DEV/Programming/my-feelings.md
-      - Python:
-        - 不喜欢Python的理由: DEV/Programming/Python/dislike.md
-        - 复制拷贝: DEV/Programming/Python/copy.md
-        - numpy速查表: DEV/Programming/Python/numpy-overview.md
-      - C:
-        - 笔记整理: DEV/Programming/C/review.md
-        - 常用函数: DEV/Programming/C/final.md
-        - stdout按行刷新: DEV/Programming/C/stdout-fflush.md
-        - 二维数组调试: DEV/Programming/C/watch-matrix.md
-      - C#:
-        - 学习笔记: DEV/Programming/Csharp/learning.md
-      - C++:
-        - 1 C++的几个基本问题: DEV/Programming/Cpp/1.md
-        - 2 函数重载: DEV/Programming/Cpp/2.md
-        - 3 类: DEV/Programming/Cpp/3.md
-        - 4 操作符重载: DEV/Programming/Cpp/4.md
-        - 5 类的继承与派生: DEV/Programming/Cpp/5.md
-        - 6 模版: DEV/Programming/Cpp/6.md
-        - 7 异常处理: DEV/Programming/Cpp/7.md
-        - 8 流类库的输入与输出: DEV/Programming/Cpp/8.md
-        - List: DEV/Programming/Cpp/list.md
-        - Stack: DEV/Programming/Cpp/stack.md
-        - 类数据成员: DEV/Programming/Cpp/class-properties.md
-        - Google风格: DEV/Programming/Cpp/google-format.md
-        - 考试复习: DEV/Programming/Cpp/final.md
-        - OJ技巧和策略: DEV/Programming/Cpp/oj.md
-  - 三次元:
-    - 3/index.md
-    - 随笔记:
-      - 3/Jottings/2211-2212.md
-      - 3/Jottings/2209-2210.md
-      - 3/Jottings/2207-2208.md
-      - 3/Jottings/2205-2206.md
-      - 3/Jottings/2203-2204.md
-      - 3/Jottings/2201-2202.md
-      - 3/Jottings/2111-2112.md
-      - 3/Jottings/2109-2110.md
-      - 3/Jottings/2107-2108.md
-      - 3/Jottings/2105-2106.md
-      - 3/Jottings/2103-2104.md
-      - 3/Jottings/2101-2102.md
-      - 3/Jottings/2011-2012.md
-      - 3/Jottings/2009-2010.md
-      - 3/Jottings/2007-2008.md
-      - 3/Jottings/2005-2006.md
-      - 3/Jottings/2003-2004.md
-      - 3/Jottings/2001-2002.md
-      - 3/Jottings/0.md
-      - 3/Jottings/1906-1912.md
-      - 3/Jottings/1807-1812.md
-      - 3/Jottings/1801-1806.md
-      - 3/Jottings/17.md
-      - 3/Jottings/16.md
-    - 文章:
-      - 3/Articles/220921-upgrade-introduction.md
-      - 3/Articles/220715-macbook-story.md
-      - 3/Articles/220624-gratitude.md
-      - 3/Articles/220621-bytedance-interview.md
-      - 3/Articles/220612-reply.md
-      - 3/Articles/2205-good-games.md
-      - 3/Articles/220506-stop-jianshu.md
-      - 3/Articles/220505-library-thu.md
-      - 3/Articles/220415-interestx2.md
-      - 3/Articles/220410-job-discussion.md
-      - 3/Articles/220410-independence.md
-      - 3/Articles/220408-appreciating-girl.md
-      - 3/Articles/220402-languages-comparision.md
-      - 3/Articles/220324-thoughts-996.md
-      - 3/Articles/220107-want-to-be.md
-      - 3/Articles/211104-emotion-bad.md
-      - 3/Articles/210928-apple-recruitment-share.md
-      - 3/Articles/2109-covid-influence.md
-      - 3/Articles/2109-group-clear.md
-      - 3/Articles/210820-cccc-event.md
-      - 3/Articles/210801-affection-3.md
-      - 3/Articles/210519-app-dev-experience.md
-      - 3/Articles/210516-apple-education-address.md
-      - 3/Articles/210502-extend-your-way.md
-      - 3/Articles/201119-a-new-review.md
-      - 3/Articles/200916-my-pursue.md
-      - 3/Articles/200713-sutuo-and-me.md
-      - 3/Articles/200703-talk-with-junior.md
-      - 3/Articles/200607-gaokao-memory.md
-      - 3/Articles/200604-small-goal.md
-      - 3/Articles/200602-tennkinoko.md
-      - 3/Articles/200506-why.md
-      - 3/Articles/2005-travel.md
-      - 3/Articles/190730-tangyan-rd-23.md
-      - 3/Articles/190723-feelings-in-6-days.md
-      - 3/Articles/190707-address-to-nonlocal-students.md
-      - 3/Articles/190629-affection-2.md
-      - 3/Articles/1905-non-intelligent.md
-      - 3/Articles/1901-go-to-thu.md
-      - 3/Articles/1811-do-it.md
-      - 3/Articles/1808-ideality-and-reality.md
-      - 3/Articles/1806-apply-thu.md
-      - 3/Articles/18-tree.md
-      - 3/Articles/18-what-i-love.md
-      - 3/Articles/17-dream-2017.md
-      - 3/Articles/14-affection-1.md
-    - 文学:
-      - 3/Literature/proses.md
-      - 3/Literature/poems.md
-    - 个人信息:
-      - 3/Info/accounts.md
+      - 推荐的java学习路线: dev/java/Java学习路线.md
+      - javaWeb复习笔记: dev/java/javaWeb/javaWeb.md
   - 转载:
-    - REPRODUCE/index.md
-    - REPRODUCE/how-to-ask-questions-the-smart-way.md
-    - REPRODUCE/tim-cook-at-duke.md
-    - REPRODUCE/my-best-teacher.md
+    - reproduce/index.md
+    - reproduce/how-to-ask-questions-the-smart-way.md
+    - reproduce/tim-cook-at-duke.md
+    - reproduce/my-best-teacher.md
   - 关于:
-    - ABOUT/index.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是ABOUT
-    - 个人履历: ABOUT/cv-full.md
-    - 支持作者: ABOUT/support.md
-    - 文章编写帮助: ABOUT/help.md
-    - 网站构建: ABOUT/build.md
-    - 测试文档: ABOUT/test.md
+    - about/index.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是ABOUT
+    - 个人履历: about/cv-full.md
+    - 支持作者: about/support.md
+    - 文章编写帮助: about/help.md
+    - 网站构建: about/build.md
+    - 测试文档: about/test.md
 
 # [Extensions]
 plugins:
