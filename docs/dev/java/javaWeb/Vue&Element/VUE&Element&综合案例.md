@@ -1728,13 +1728,13 @@ public class SelectAllServlet extends HttpServlet {
 
 在浏览器输入访问 servlet 的资源路径 `http://localhost:8080/brand-case/selectAllServlet` ，如果没有报错，并能看到如下信息表明后端程序没有问题
 
-![image-20210825205133752](../../../../../传智播客/2021年/web阶段文档编写/JavaWeb课程文档/day14-综合案例/assets/image-20210825205133752.png)
+![image-20210825205133752](./assets/image-20210825205133752.png)
 
 #### 3.3.2  前端实现
 
 前端需要在页面加载完毕后发送 ajax 请求，所以发送请求的逻辑应该放在 `mounted()` 钩子函数中。而响应回来的数据需要赋值给表格绑定的数据模型，从下图可以看出表格绑定的数据模型是 `tableData`
 
-<img src="../../../../../传智播客/2021年/web阶段文档编写/JavaWeb课程文档/day14-综合案例/assets/image-20210825220436889.png" alt="image-20210825220436889" style="zoom:70%;" />
+<img src="./assets/image-20210825220436889.png" alt="image-20210825220436889" style="zoom:70%;" />
 
 前端代码如下：
 
@@ -1754,15 +1754,15 @@ public class SelectAllServlet extends HttpServlet {
 
 ### 3.4  添加功能
 
-<img src="../../../../../传智播客/2021年/web阶段文档编写/JavaWeb课程文档/day14-综合案例/assets/image-20210825221138245.png" alt="image-20210825221138245" style="zoom:70%;" />
+<img src="./assets/image-20210825221138245.png" alt="image-20210825221138245" style="zoom:70%;" />
 
 上图是添加数据的对话框，当点击 `提交` 按钮后就需要将数据提交到后端，并将数据保存到数据库中。下图是整体的流程：
 
-![image-20210825221329231](../../../../../传智播客/2021年/web阶段文档编写/JavaWeb课程文档/day14-综合案例/assets/image-20210825221329231.png)
+![image-20210825221329231](./assets/image-20210825221329231.png)
 
 页面发送请求时，需要将输入框输入的内容提交给后端程序，而这里是以 json 格式进行传递的。而具体的数据格式如下：
 
-![image-20210826185917510](../../../../../传智播客/2021年/web阶段文档编写/JavaWeb课程文档/day14-综合案例/assets/image-20210826185917510.png)
+![image-20210826185917510](./assets/image-20210826185917510.png)
 
 > ==注意：由于是添加数据，所以上述json数据中id是没有值的。==
 

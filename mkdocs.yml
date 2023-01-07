@@ -75,12 +75,10 @@ nav:
         - javaScript: dev/java/javaWeb/javaScript/JavaScript.md
         - jdbc: dev/java/javaWeb/jdbc/JSP.md
         - jsp: dev/java/javaWeb/jsp/会话技术.md
-        - mybatis: dev/java/javaWeb/mybatis/Mybatis.md
         - mybatis&maven: dev/java/javaWeb/maven/Maven&MyBatis.md
         - request&response: dev/java/javaWeb/request&response/Request&Response.md
-        - Vue&Element: dev/java/javaWeb/Vue&Element/VUE&Element&综合案例.md
         - 会话技术: dev/java/javaWeb/会话技术/会话技术.md
-        - 会话技术: dev/java/javaWeb/综合案例/综合案例.md
+        - 综合案例: dev/java/javaWeb/综合案例/综合案例.md
   - 随笔记:
     - diary/index.md
     - 随记: diary/随笔记.md
