@@ -72,15 +72,15 @@ nav:
       - javaWeb:
         - javaWeb复习笔记: dev/java/javaWeb/javaWeb.md
         - filter&Listener: dev/java/javaWeb/filter&Listener/会话技术.md
-        - javaScript: dev/java/javaWeb/filter&Listener/JavaScript.md
-        - jdbc: dev/java/javaWeb/filter&Listener/JSP.md
-        - jsp: dev/java/javaWeb/filter&Listener/会话技术.md
-        - mybatis: dev/java/javaWeb/filter&Listener/Mybatis.md
-        - mybatis&maven: dev/java/javaWeb/filter&Listener/Maven&MyBatis.md
-        - request&response: dev/java/javaWeb/filter&Listener/Request&Response.md
-        - Vue&Element: dev/java/javaWeb/filter&Listener/VUE&Element&综合案例.md
-        - 会话技术: dev/java/javaWeb/filter&Listener/会话技术.md
-        - 综合案例: dev/java/javaWeb/filter&Listener/综合案例.md
+        - javaScript: dev/java/javaWeb/javaScript/JavaScript.md
+        - jdbc: dev/java/javaWeb/jdbc/JSP.md
+        - jsp: dev/java/javaWeb/jsp/会话技术.md
+        - mybatis: dev/java/javaWeb/mybatis/Mybatis.md
+        - mybatis&maven: dev/java/javaWeb/maven/Maven&MyBatis.md
+        - request&response: dev/java/javaWeb/request&response/Request&Response.md
+        - Vue&Element: dev/java/javaWeb/Vue&Element/VUE&Element&综合案例.md
+        - 会话技术: dev/java/javaWeb/会话技术/会话技术.md
+        - 综合案例: dev/java/javaWeb/综合案例/综合案例.md
   - 随笔记:
     - diary/index.md
     - 随记: diary/随笔记.md
