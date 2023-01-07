@@ -80,7 +80,7 @@ nav:
         - request&response: dev/java/javaWeb/request&response/Request&Response.md
         - Vue&Element: dev/java/javaWeb/Vue&Element/VUE&Element&综合案例.md
         - 会话技术: dev/java/javaWeb/会话技术/会话技术.md
-        - 综合案例: dev/java/javaWeb/综合案例/综合案例.md
+        - 会话技术: dev/java/javaWeb/综合案例/综合案例.md
   - 随笔记:
     - diary/index.md
     - 随记: diary/随笔记.md
