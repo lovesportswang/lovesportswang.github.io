@@ -72,16 +72,11 @@ nav:
       - javaWeb复习笔记: dev/java/javaWeb/javaWeb.md
   - 转载:
     - reproduce/index.md
-    - reproduce/how-to-ask-questions-the-smart-way.md
-    - reproduce/tim-cook-at-duke.md
-    - reproduce/my-best-teacher.md
   - 关于:
-    - about/index.md # 使用两个index 这样子左上角第一次打开会是所有Tab 而不是ABOUT
-    - 个人履历: about/cv-full.md
-    - 支持作者: about/support.md
+    - about/index.md
+    - 个人履历: about/personal.md
     - 文章编写帮助: about/help.md
     - 网站构建: about/build.md
-    - 测试文档: about/test.md
 
 # [Extensions]
 plugins:
