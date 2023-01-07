@@ -69,7 +69,21 @@ nav:
     - dev/index.md
     - 编程:
       - 推荐的java学习路线: dev/java/Java学习路线.md
-      - javaWeb复习笔记: dev/java/javaWeb/javaWeb.md
+      - javaWeb:
+        - javaWeb复习笔记: dev/java/javaWeb/javaWeb.md
+        - filter&Listener: dev/java/javaWeb/filter&Listener/会话技术.md
+        - javaScript: dev/java/javaWeb/filter&Listener/JavaScript.md
+        - jdbc: dev/java/javaWeb/filter&Listener/JSP.md
+        - jsp: dev/java/javaWeb/filter&Listener/会话技术.md
+        - mybatis: dev/java/javaWeb/filter&Listener/Mybatis.md
+        - mybatis&maven: dev/java/javaWeb/filter&Listener/Maven&MyBatis.md
+        - request&response: dev/java/javaWeb/filter&Listener/Request&Response.md
+        - Vue&Element: dev/java/javaWeb/filter&Listener/VUE&Element&综合案例.md
+        - 会话技术: dev/java/javaWeb/filter&Listener/会话技术.md
+        - 综合案例: dev/java/javaWeb/filter&Listener/综合案例.md
+  - 随笔记:
+    - diary/index.md
+    - 随记: diary/随笔记.md
   - 转载:
     - reproduce/index.md
   - 关于:
