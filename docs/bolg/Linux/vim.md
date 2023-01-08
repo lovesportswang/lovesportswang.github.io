@@ -4,11 +4,6 @@ title: Vim学习笔记
 
 # Vim学习笔记
 
-> Author: 杨希杰 [Yang Xijie](https://github.com/Yang-Xijie)
-> 
-> Written on: 210419
-> 
-> Notes: 记录了vim一些简单实用的操作
 
 ## 基本
 
