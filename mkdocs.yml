@@ -61,7 +61,6 @@ nav:
       - 镜像到Gitee: bolg/GitHub/mirror.md
     - Markdown:
       - Markdown语法初学习: bolg/Markdown/grammars.md
-      - TODO ExMark规范: bolg/Markdown/ExMark-spec-zh.txt
       - MkDocs静态网站构建: bolg/Markdown/mkdocs-site.md
       - mdBook静态网站构建: bolg/Markdown/mdbook-site.md
       - GitHub Pages简介: bolg/Markdown/github-pages.md
@@ -71,11 +70,11 @@ nav:
       - 推荐的java学习路线: dev/java/Java学习路线.md
       - javaWeb:
         - javaWeb复习笔记: dev/java/javaWeb/javaWeb.md
-  - 随笔记:
-    - diary/index.md
-    - 随记: diary/随笔记.md
   - 转载:
     - reproduce/index.md
+  - 我杂乱无章的记事本:
+    - diary/index.md
+    - 随记: diary/随笔记.md
   - 关于:
     - about/index.md
     - 个人履历: about/personal.md
