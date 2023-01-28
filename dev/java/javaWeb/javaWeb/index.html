@@ -1,0 +1,2488 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="wang的个人网站">
+      
+      
+        <meta name="author" content="wang">
+      
+      
+        <link rel="canonical" href="https://lovesportswang.github.io/dev/java/javaWeb/javaWeb/">
+      
+      
+        <link rel="prev" href="../../Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/">
+      
+      
+        <link rel="next" href="../../../../reproduce/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>javaWeb复习笔记 - wang的个人网站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#javaweb" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="wang的个人网站" class="md-header__button md-logo" aria-label="wang的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            wang的个人网站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              javaWeb复习笔记
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lovesportswang/lovesportswang.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lovesportswang.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../bolg/" class="md-tabs__link">
+        博客
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link md-tabs__link--active">
+        开发
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../reproduce/" class="md-tabs__link">
+        转载
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../diary/" class="md-tabs__link">
+        我杂乱无章的记事本
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../about/" class="md-tabs__link">
+        关于
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="wang的个人网站" class="md-nav__button md-logo" aria-label="wang的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    wang的个人网站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lovesportswang/lovesportswang.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lovesportswang.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../bolg/">博客</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="博客" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          博客
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" tabindex="0" aria-expanded="false">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bolg/Linux/vim/" class="md-nav__link">
+        vim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bolg/Linux/tmux/" class="md-nav__link">
+        tmux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bolg/Linux/unix/" class="md-nav__link">
+        UNIX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bolg/Linux/kernel-compile/" class="md-nav__link">
+        内核编译
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bolg/Linux/pi-start/" class="md-nav__link">
+        连接树莓派
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_3" tabindex="0" aria-expanded="false">
+          GitHub
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="GitHub" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          GitHub
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bolg/GitHub/mirror/" class="md-nav__link">
+        镜像到Gitee
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_1_4" tabindex="0" aria-expanded="false">
+          Markdown
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Markdown" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Markdown
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bolg/Markdown/grammars/" class="md-nav__link">
+        Markdown语法初学习
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bolg/Markdown/mkdocs-site/" class="md-nav__link">
+        MkDocs静态网站构建
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bolg/Markdown/mdbook-site/" class="md-nav__link">
+        mdBook静态网站构建
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../bolg/Markdown/github-pages/" class="md-nav__link">
+        GitHub Pages简介
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../">开发</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="开发" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          开发
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" tabindex="0" aria-expanded="true">
+          编程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="编程" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          编程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" class="md-nav__link">
+        推荐的java学习路线
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2_2_2" type="checkbox" id="__nav_2_2_2" checked>
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_2" tabindex="0" aria-expanded="true">
+          javaWeb
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="javaWeb" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          javaWeb
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          javaWeb复习笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        javaWeb复习笔记
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#javaweb" class="md-nav__link">
+    javaWeb笔记
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1http" class="md-nav__link">
+    1.http
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2tomcat" class="md-nav__link">
+    2.tomcat配置
+  </a>
+  
+    <nav class="md-nav" aria-label="2.tomcat配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    项目要部署的两种方式：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3jsp" class="md-nav__link">
+    3.jsp 元素：
+  </a>
+  
+    <nav class="md-nav" aria-label="3.jsp 元素：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1html" class="md-nav__link">
+    1.html
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2.&lt;%%&gt; 小脚本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3.&lt;%=%&gt; 表达式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4.&lt;%! %&gt; 声明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 动作标记
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6page-include" class="md-nav__link">
+    6.&lt;%@page %&gt;   &lt;%@include %&gt; 指令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7.注释
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4jsp" class="md-nav__link">
+    4.jsp内置对象
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5post-get" class="md-nav__link">
+    5.post &amp; get请求区别
+  </a>
+  
+    <nav class="md-nav" aria-label="5.post &amp; get请求区别">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1get-post" class="md-nav__link">
+    1.传参方式不同：get 是地址栏传参 post 是隐式的请求体方式提交传参
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2get-post" class="md-nav__link">
+    2.安全性：get 不安全 ;post 安全
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    3.传输数据的大小：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6.重定向和转发
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7_1" class="md-nav__link">
+    7.作用域对象的区别
+  </a>
+  
+    <nav class="md-nav" aria-label="7.作用域对象的区别">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1pagecontextpagecontext" class="md-nav__link">
+    1、pageContext对象的范围只适用于当前页面范围，即超过这个页面就不能够使用了。所以使用pageContext对象向其它页面传递参数是不可能的。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2requestjspjsp" class="md-nav__link">
+    2、request对象的范围是指在一JSP网页发出请求到另一个JSP网页之间，随后这个属性就失效。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3session" class="md-nav__link">
+    3、session的作用范围为一段用户持续和服务器所连接的时间，但与服务器断线后，这个属性就无效。比如断网或者关闭浏览器。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4application" class="md-nav__link">
+    4、application的范围在服务器一开始执行服务，到服务器关闭为止。它的范围最大，生存周期最长
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    8.状态码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9servlet" class="md-nav__link">
+    9.Servlet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10servlet" class="md-nav__link">
+    10.Servlet生命周期
+  </a>
+  
+    <nav class="md-nav" aria-label="10.Servlet生命周期">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#init-service-destroy-servlet" class="md-nav__link">
+    init( ),service( ),destroy( )是Servlet生命周期的方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11service-dogetdopost" class="md-nav__link">
+    11.service() 和 doGet()及doPost()关系
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12init" class="md-nav__link">
+    12.init()初始化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13application" class="md-nav__link">
+    13.如何获取application对象
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    14.页面显示乱码
+  </a>
+  
+    <nav class="md-nav" aria-label="14.页面显示乱码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iso-8859-1" class="md-nav__link">
+    乱码原因：由于在解析过程中默认使用的编码方式为 ISO-8859-1（此编码不支持中文），所以解析时会出现乱码。
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15servlet" class="md-nav__link">
+    15.Servlet实例化和初始化时间？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16session" class="md-nav__link">
+    16.session创建
+  </a>
+  
+    <nav class="md-nav" aria-label="16.session创建">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#session" class="md-nav__link">
+    使用session进行状态管理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session_1" class="md-nav__link">
+    销毁Session
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17el" class="md-nav__link">
+    17.el表达式
+  </a>
+  
+    <nav class="md-nav" aria-label="17.el表达式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pagepagecontext" class="md-nav__link">
+    page和pageContext的区别
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    注意：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18jstl" class="md-nav__link">
+    18.JSTL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    19.过滤器
+  </a>
+  
+    <nav class="md-nav" aria-label="19.过滤器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    配置过滤器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    过滤器的实现
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    过滤器的生命周期
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20" class="md-nav__link">
+    20.监听器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21cookie-session" class="md-nav__link">
+    21.Cookie &amp; Session
+  </a>
+  
+    <nav class="md-nav" aria-label="21.Cookie &amp; Session">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cookie" class="md-nav__link">
+    cookie的机制：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookie_1" class="md-nav__link">
+    cookie的主要用途：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookie_2" class="md-nav__link">
+    cookie的生命周期：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookie_3" class="md-nav__link">
+    cookie的功能特点：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session_2" class="md-nav__link">
+    session:
+  </a>
+  
+    <nav class="md-nav" aria-label="session:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#session_3" class="md-nav__link">
+    session的机制：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session_4" class="md-nav__link">
+    使用session的好处：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookiesession" class="md-nav__link">
+    cookie与session的区别：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../reproduce/">转载</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="转载" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          转载
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../diary/">我杂乱无章的记事本</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="我杂乱无章的记事本" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          我杂乱无章的记事本
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../diary/%E9%9A%8F%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        随记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../../about/">关于</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="关于" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          关于
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/personal/" class="md-nav__link">
+        个人履历
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/help/" class="md-nav__link">
+        文章编写帮助
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/build/" class="md-nav__link">
+        网站构建
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#javaweb" class="md-nav__link">
+    javaWeb笔记
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1http" class="md-nav__link">
+    1.http
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2tomcat" class="md-nav__link">
+    2.tomcat配置
+  </a>
+  
+    <nav class="md-nav" aria-label="2.tomcat配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    项目要部署的两种方式：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3jsp" class="md-nav__link">
+    3.jsp 元素：
+  </a>
+  
+    <nav class="md-nav" aria-label="3.jsp 元素：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1html" class="md-nav__link">
+    1.html
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2.&lt;%%&gt; 小脚本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3.&lt;%=%&gt; 表达式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4.&lt;%! %&gt; 声明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 动作标记
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6page-include" class="md-nav__link">
+    6.&lt;%@page %&gt;   &lt;%@include %&gt; 指令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7.注释
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4jsp" class="md-nav__link">
+    4.jsp内置对象
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5post-get" class="md-nav__link">
+    5.post &amp; get请求区别
+  </a>
+  
+    <nav class="md-nav" aria-label="5.post &amp; get请求区别">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1get-post" class="md-nav__link">
+    1.传参方式不同：get 是地址栏传参 post 是隐式的请求体方式提交传参
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2get-post" class="md-nav__link">
+    2.安全性：get 不安全 ;post 安全
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    3.传输数据的大小：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6.重定向和转发
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7_1" class="md-nav__link">
+    7.作用域对象的区别
+  </a>
+  
+    <nav class="md-nav" aria-label="7.作用域对象的区别">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1pagecontextpagecontext" class="md-nav__link">
+    1、pageContext对象的范围只适用于当前页面范围，即超过这个页面就不能够使用了。所以使用pageContext对象向其它页面传递参数是不可能的。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2requestjspjsp" class="md-nav__link">
+    2、request对象的范围是指在一JSP网页发出请求到另一个JSP网页之间，随后这个属性就失效。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3session" class="md-nav__link">
+    3、session的作用范围为一段用户持续和服务器所连接的时间，但与服务器断线后，这个属性就无效。比如断网或者关闭浏览器。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4application" class="md-nav__link">
+    4、application的范围在服务器一开始执行服务，到服务器关闭为止。它的范围最大，生存周期最长
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    8.状态码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9servlet" class="md-nav__link">
+    9.Servlet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10servlet" class="md-nav__link">
+    10.Servlet生命周期
+  </a>
+  
+    <nav class="md-nav" aria-label="10.Servlet生命周期">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#init-service-destroy-servlet" class="md-nav__link">
+    init( ),service( ),destroy( )是Servlet生命周期的方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11service-dogetdopost" class="md-nav__link">
+    11.service() 和 doGet()及doPost()关系
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12init" class="md-nav__link">
+    12.init()初始化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13application" class="md-nav__link">
+    13.如何获取application对象
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    14.页面显示乱码
+  </a>
+  
+    <nav class="md-nav" aria-label="14.页面显示乱码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iso-8859-1" class="md-nav__link">
+    乱码原因：由于在解析过程中默认使用的编码方式为 ISO-8859-1（此编码不支持中文），所以解析时会出现乱码。
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15servlet" class="md-nav__link">
+    15.Servlet实例化和初始化时间？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16session" class="md-nav__link">
+    16.session创建
+  </a>
+  
+    <nav class="md-nav" aria-label="16.session创建">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#session" class="md-nav__link">
+    使用session进行状态管理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session_1" class="md-nav__link">
+    销毁Session
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17el" class="md-nav__link">
+    17.el表达式
+  </a>
+  
+    <nav class="md-nav" aria-label="17.el表达式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pagepagecontext" class="md-nav__link">
+    page和pageContext的区别
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    注意：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18jstl" class="md-nav__link">
+    18.JSTL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    19.过滤器
+  </a>
+  
+    <nav class="md-nav" aria-label="19.过滤器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    配置过滤器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    过滤器的实现
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    过滤器的生命周期
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20" class="md-nav__link">
+    20.监听器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21cookie-session" class="md-nav__link">
+    21.Cookie &amp; Session
+  </a>
+  
+    <nav class="md-nav" aria-label="21.Cookie &amp; Session">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cookie" class="md-nav__link">
+    cookie的机制：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookie_1" class="md-nav__link">
+    cookie的主要用途：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookie_2" class="md-nav__link">
+    cookie的生命周期：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookie_3" class="md-nav__link">
+    cookie的功能特点：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session_2" class="md-nav__link">
+    session:
+  </a>
+  
+    <nav class="md-nav" aria-label="session:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#session_3" class="md-nav__link">
+    session的机制：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session_4" class="md-nav__link">
+    使用session的好处：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookiesession" class="md-nav__link">
+    cookie与session的区别：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+  
+  
+
+
+
+  <h1>javaWeb复习笔记</h1>
+
+<h2 id="javaweb">javaWeb笔记<a class="headerlink" href="#javaweb" title="Permanent link">&para;</a></h2>
+<h1 id="1http">1.http<a class="headerlink" href="#1http" title="Permanent link">&para;</a></h1>
+<p>超文本传输协议，是一种规则，规定了浏览器和服务器之前的数据传输规则</p>
+<p>http协议的特点:</p>
+<p>1.基于tcp协议：面向连接，安全</p>
+<p>2.基于请求-响应模型的，   一次请求对应一次响应</p>
+<p>3.HTTP协议是无状态的协议:对于事务处理没有记忆能力。每次请求-响应都是独立的。缺点:多次请求间不能共享数据。Java中使用会话技术(Cookie、Session）来解决这个问题.优点:速度快</p>
+<h1 id="2tomcat">2.tomcat配置<a class="headerlink" href="#2tomcat" title="Permanent link">&para;</a></h1>
+<h4 id="_1">项目要部署的两种方式：<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p>1.直接将项目的war包放到webapps</p>
+<p>2.在config/server.xml中<host>标记下配置<Context path="项目名" docBase="资源路径" /></p>
+<h1 id="3jsp">3.jsp 元素：<a class="headerlink" href="#3jsp" title="Permanent link">&para;</a></h1>
+<h5 id="1html">1.html<a class="headerlink" href="#1html" title="Permanent link">&para;</a></h5>
+<h5 id="2">2.&lt;%%&gt; 小脚本<a class="headerlink" href="#2" title="Permanent link">&para;</a></h5>
+<h5 id="3">3.&lt;%=%&gt; 表达式<a class="headerlink" href="#3" title="Permanent link">&para;</a></h5>
+<h5 id="4">4.&lt;%! %&gt; 声明<a class="headerlink" href="#4" title="Permanent link">&para;</a></h5>
+<h5 id="5">5.<jsp: /> 动作标记<a class="headerlink" href="#5" title="Permanent link">&para;</a></h5>
+<h5 id="6page-include">6.&lt;%@page %&gt;   &lt;%@include %&gt; 指令<a class="headerlink" href="#6page-include" title="Permanent link">&para;</a></h5>
+<h5 id="7">7.注释<a class="headerlink" href="#7" title="Permanent link">&para;</a></h5>
+<h1 id="4jsp">4.jsp内置对象<a class="headerlink" href="#4jsp" title="Permanent link">&para;</a></h1>
+<p>九大内置对象</p>
+<p>request 、response 、out</p>
+<p>session 、application</p>
+<p>pageContext、 page、config、 exception</p>
+<p>作用域对象：设置属性serAttribute ("key","val") ，获取属性getAttribute("key")</p>
+<h1 id="5post-get">5.post &amp; get请求区别<a class="headerlink" href="#5post-get" title="Permanent link">&para;</a></h1>
+<h6 id="1get-post">1.传参方式不同：get 是地址栏传参 post 是隐式的请求体方式提交传参<a class="headerlink" href="#1get-post" title="Permanent link">&para;</a></h6>
+<h6 id="2get-post">2.安全性：get 不安全 ;post 安全<a class="headerlink" href="#2get-post" title="Permanent link">&para;</a></h6>
+<h6 id="3_1">3.<strong>传输数据的大小</strong>：<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h6>
+<p>get一般传输数据大小不超过2k-4k</p>
+<p>post请求传输数据的大小根据php.ini 配置文件设定，也可以无限大。</p>
+<p><strong>4、缓存性：</strong></p>
+<p>get请求是可以缓存的</p>
+<p>post请求不可以缓存</p>
+<p><strong>5、后退页面的反应</strong></p>
+<p>get请求页面后退时，不产生影响</p>
+<p>post请求页面后退时，会重新提交请求、</p>
+<h1 id="6">6.重定向和转发<a class="headerlink" href="#6" title="Permanent link">&para;</a></h1>
+<p><img alt="重定向和转发" src="../images/%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E8%BD%AC%E5%8F%91.png" /></p>
+<h1 id="7_1">7.作用域对象的区别<a class="headerlink" href="#7_1" title="Permanent link">&para;</a></h1>
+<h6 id="1pagecontextpagecontext">1、pageContext对象的范围只适用于当前页面范围，即超过这个页面就不能够使用了。所以使用pageContext对象向其它页面传递参数是不可能的。<a class="headerlink" href="#1pagecontextpagecontext" title="Permanent link">&para;</a></h6>
+<h6 id="2requestjspjsp">2、request对象的范围是指在一JSP网页发出请求到另一个JSP网页之间，随后这个属性就失效。<a class="headerlink" href="#2requestjspjsp" title="Permanent link">&para;</a></h6>
+<h6 id="3session">3、session的作用范围为一段用户持续和服务器所连接的时间，但与服务器断线后，这个属性就无效。比如断网或者关闭浏览器。<a class="headerlink" href="#3session" title="Permanent link">&para;</a></h6>
+<h6 id="4application">4、application的范围在服务器一开始执行服务，到服务器关闭为止。它的范围最大，生存周期最长<a class="headerlink" href="#4application" title="Permanent link">&para;</a></h6>
+<h1 id="8">8.状态码<a class="headerlink" href="#8" title="Permanent link">&para;</a></h1>
+<p><strong>404：找不到资源或url错误或该资源不存在</strong></p>
+<p><strong>200：访问成功</strong></p>
+<p><strong>500：服务器端应用程序异常</strong></p>
+<p><strong>405：确实dopost或doget方法</strong></p>
+<p><strong>400：请求url异常</strong></p>
+<h1 id="9servlet">9.Servlet<a class="headerlink" href="#9servlet" title="Permanent link">&para;</a></h1>
+<p><strong>server Applet</strong></p>
+<p>称为小服务程序或<strong>服务连接器</strong>，用Java编写的<strong>服务器端程序</strong></p>
+<p>定义一个HttpServlet</p>
+<p>自定义一个类去实现<strong>HttpServlet</strong> ()         <strong>HttpServlet是<a href="https://so.csdn.net/so/search?q=Servlet&amp;spm=1001.2101.3001.7020">Servlet</a>接口的一个实现类，并且它是一个抽象类</strong></p>
+<p>HttpServlet的实现由两种方式：</p>
+<p>1.xml配置实现</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;servlet&gt;</span>
+<span class="w">  </span><span class="nt">&lt;servlet-name&gt;</span>demo1<span class="nt">&lt;/servlet-name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;servlet-class&gt;</span>cn.wang.servlet.ServletDemo1<span class="nt">&lt;/servlet-class&gt;</span>
+<span class="nt">&lt;/servlet&gt;</span>
+<span class="nt">&lt;servlet-mapping&gt;</span>
+<span class="w">  </span><span class="nt">&lt;servlet-name&gt;</span>demo1<span class="nt">&lt;/servlet-name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;url-pattern&gt;</span>/demo1<span class="nt">&lt;/url-pattern&gt;</span>
+<span class="nt">&lt;/servlet-mapping&gt;</span>
+</code></pre></div>
+<p>2.注解配置</p>
+<p><strong>@WebServlet（urlPatterns = "/demo1"）</strong></p>
+<h1 id="10servlet">10.Servlet生命周期<a class="headerlink" href="#10servlet" title="Permanent link">&para;</a></h1>
+<p><strong>Servlet 从被创建到使用，再到最后被销毁整个生命周期，都是由容器（eg:tomcat）来决定的</strong></p>
+<h2 id="init-service-destroy-servlet">init( ),service( ),destroy( )是Servlet生命周期的方法<a class="headerlink" href="#init-service-destroy-servlet" title="Permanent link">&para;</a></h2>
+<p>1.<strong>init( ),当Servlet第一次被请求时，Servlet容器就会开始调用这个方法来初始化一个Servlet对象出来，但是这个方法在后续请求中不会在被Servlet容器调用</strong>,  <strong>Servlet容器会传入一个ServletConfig对象进来从而对Servlet对象进行初始化</strong></p>
+<p><strong>2.service( )方法，每当请求Servlet时，Servlet容器就会调用这个方法。</strong></p>
+<p><strong>3.destory,当要销毁Servlet时，Servlet容器就会调用这个方法</strong></p>
+<h1 id="11service-dogetdopost">11.service() 和 doGet()及doPost()关系<a class="headerlink" href="#11service-dogetdopost" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p><strong>service（）方法，如果Servlet中有service（）方法，则优先调用Service()方法。</strong></p>
+</li>
+<li>
+<p><strong>doGet()，在没有service()的情况下，如果是get请求，则调用get请求处理的方法。</strong></p>
+</li>
+<li>
+<p><strong>doPost（），在没有service()，如果是post请求，则调用post请求处理的方法。</strong></p>
+</li>
+</ol>
+<p><strong>总结：即每次会先调用Service（）方法，在service()方法中获取本次请求的的method,判断是否是get还是post</strong>
+    <strong>再调用doGet和doPost</strong></p>
+<h1 id="12init">12.init()初始化<a class="headerlink" href="#12init" title="Permanent link">&para;</a></h1>
+<p><strong>在Servlet实例化之后，Servlet容器会调用init()方法，来初始化该对象，主要是为了让Servlet对象在处理客户请求前可以完成一些初始化的工作，例如，建立数据库的连接，获取配置信息等（<code>config.getInitParameter("initCount");</code>）。对于每一个Servlet实例，init()方法只能被调用一次。</strong></p>
+<h1 id="13application">13.如何获取application对象<a class="headerlink" href="#13application" title="Permanent link">&para;</a></h1>
+<p><strong>a.request.getServletContext()</strong></p>
+<p><strong>b.在Servlet中调用 this.getServletContext()</strong></p>
+<h1 id="14">14.页面显示乱码<a class="headerlink" href="#14" title="Permanent link">&para;</a></h1>
+<h3 id="iso-8859-1">乱码原因：由于在解析过程中默认使用的编码方式为 ISO-8859-1（此编码不支持中文），所以解析时会出现乱码。<a class="headerlink" href="#iso-8859-1" title="Permanent link">&para;</a></h3>
+<p>​       设置响应的文本类型及编码方式</p>
+<p>​      resp.setContentType("text/html;charset=UTF-8"); /</p>
+<p>​      //获取writer字符输出流</p>
+<p>​       PrintWriter writer= resp.getWriter();</p>
+<h1 id="15servlet">15.Servlet实例化和初始化时间？<a class="headerlink" href="#15servlet" title="Permanent link">&para;</a></h1>
+<p>默认情况下，<strong>第一次被访问时</strong>才实例化和初始化</p>
+<p>自定义配置Servlet加载实例化初始化的时机和顺序：</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@WebServlet</span><span class="p">(</span><span class="n">urlPatterns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/demo2&quot;</span><span class="p">,</span><span class="n">loadOnStartup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="c1">//服务器一启动的时候就创建好servlet</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">loadOnStartup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="err">（</span><span class="n">默认值为</span><span class="o">-</span><span class="mi">1</span><span class="err">）</span><span class="w">      </span><span class="n">负整数</span><span class="err">：</span><span class="w"> </span><span class="n">servlet第一次被访问时创建Servlet</span><span class="w"> </span><span class="n">对象</span>
+<span class="o">*</span><span class="w">                                  </span><span class="mi">0</span><span class="n">或正整数</span><span class="err">：</span><span class="p">{</span><span class="n">服务器一启动的时候就创建好servlet</span><span class="p">}</span>
+</code></pre></div>
+<h1 id="16session">16.session创建<a class="headerlink" href="#16session" title="Permanent link">&para;</a></h1>
+<p>获取Session </p>
+<p>方式一：</p>
+<p><strong>HttpSession session = request.getSession(true);</strong></p>
+<p><strong>当params为true时，先查看请求当中是否有sessionId,如果没有</strong>
+<strong>sessionId,则创建一个session对象；如果有sessionId,则</strong>
+<strong>依据该sessionId去查找对应的session对象，如果找到了，则</strong>
+<strong>返回该session对象,</strong>  <strong>如果没有找到，则创建一个新的session对象</strong></p>
+<p>方式二：</p>
+<p><strong>HttpSession session = request.getSession(false);</strong></p>
+<p><strong>当flag为false，先查看请求当中是否有sessionId,如果没有，</strong>
+<strong>返回null;如果有sessionId,则依据该sessionId去查找对应的</strong>
+<strong>session对象，如果找到了，则返回该session对象，</strong></p>
+<p><strong>如果没有找到,返回null</strong></p>
+<p>​   </p>
+<h4 id="session">使用session进行状态管理<a class="headerlink" href="#session" title="Permanent link">&para;</a></h4>
+<p><strong>a.将数据绑订到session对象上:</strong>
+    <strong>session.setAttribute(String name,Object obj);</strong>
+<strong>b.依据绑订名获得绑订值:</strong>
+    <strong>Object session.getAttribute(String name);</strong>
+<strong>c.解除绑订:</strong>
+    <strong>session.removeAttribute(String name);</strong></p>
+<h4 id="session_1">销毁Session<a class="headerlink" href="#session_1" title="Permanent link">&para;</a></h4>
+<p><strong>session.invalidate();</strong></p>
+<h1 id="17el">17.el表达式<a class="headerlink" href="#17el" title="Permanent link">&para;</a></h1>
+<h3 id="pagepagecontext">page和pageContext的区别<a class="headerlink" href="#pagepagecontext" title="Permanent link">&para;</a></h3>
+<p>page代表JSP网页本身</p>
+<p>pageContext，该对象代表该JSP 页面上下文，使用该对象可以访问页面中的共享数据。</p>
+<p>总的来说，pageContext和page都是jsp中的隐含对象，pageContext代表jsp页面的上下文关系，能够调用、存取其他隐含对象；page代表处理当前请求的时候，这个页面的实现类的实例。</p>
+<p><strong>1、EL算术运算五个：</strong> </p>
+<div class="highlight"><pre><span></span><code>+ 、- 、 * 、 /或div 、 %或mod(取余)
+</code></pre></div>
+<p><strong>2、EL关系运算符六个</strong></p>
+<table border="1" cellpadding="0" cellspacing="0"><tbody><tr><td><p>关系运算符</p></td><td><p>说明</p></td><td><p>范例</p></td><td><p>结果</p></td></tr><tr><td><p>== 或 eq</p></td><td><p>等于</p></td><td><p>${5==5}或${5eq5}</p></td><td><p>true</p></td></tr><tr><td><p>!= 或 ne</p></td><td><p>不等于</p></td><td><p>${5!=5}或${5ne5}</p></td><td><p>false</p></td></tr><tr><td><p>&lt; 或 lt</p></td><td><p>小于</p></td><td><p>${3&lt;5}或${3lt5}</p></td><td><p>true</p></td></tr><tr><td><p>&gt; 或 gt</p></td><td><p>大于</p></td><td><p>${3&gt;5}或{3gt5}</p></td><td><p>false</p></td></tr><tr><td><p>&lt;= 或 le</p></td><td><p>小于等于</p></td><td><p>${3&lt;=5}或${3le5}</p></td><td><p>true</p></td></tr><tr><td><p>&gt;= 或 ge</p></td><td><p>大于等于</p></td><td><p>${3&gt;=5}或${3ge5}</p></td><td><p>false</p></td></tr></tbody></table>
+
+<p><strong>3、EL逻辑运算符三个</strong></p>
+<table border="1" cellpadding="0" cellspacing="0"><tbody><tr><td><p>逻辑运算符</p></td><td><p>范例</p></td><td><p>结果</p></td></tr><tr><td><p>&amp;&amp;或and</p></td><td><p>交集${A &amp;&amp; B}或${A and B}</p></td><td><p>true/false</p></td></tr><tr><td><p>||或or</p></td><td><p>并集${A || B}或${A or B}</p></td><td><p>true/false</p></td></tr><tr><td><p>!或not</p></td><td><p>非${! A }或${not A}</p></td><td><p>true/false</p></td></tr></tbody></table>
+
+<p><strong>4、</strong> <strong>获取域对象的内容</strong></p>
+<p><strong>${key}  等价于 从小到大在所有域对象中查找 ，如果找到则返回，找不到则不显示</strong></p>
+<h3 id="_2">注意：<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="c1">//        request.getAttribute(&quot;num1&quot;);  是从服务器端的域对象中获取参数       等价${num1}</span>
+<span class="c1">//              request.getParameter(&quot;num1&quot;);    是从客户端的请求参数中获取   等价${param.num2}</span>
+</code></pre></div>
+<h1 id="18jstl">18.JSTL<a class="headerlink" href="#18jstl" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>1.导入jsp库<br />
+&lt;%@ taglib prefix=”c” uri=”http://java.sun.com/jsp/jstl/core”%&gt;</strong></p>
+</blockquote>
+<p>1.<code>&lt;c:out&gt;</code>标签</p>
+<div class="highlight"><pre><span></span><code>&lt;c:out value=&quot;&lt;c:out&gt; Tag&quot;/&gt; 把value所包含的字符串输出&lt;符号会自动转义。
+&lt;c:out value=&quot;${account}&quot; default=&quot;none&quot;/&gt;默认值输出
+</code></pre></div>
+<p>2.&lt; c:set&gt;标签</p>
+<div class="highlight"><pre><span></span><code>&lt;c: set value=&quot;wang&quot; var = &quot;name&quot; &gt;&lt;/c:set&gt;  等价于  setAttribute(&quot;name&quot;,&quot;wang&quot;)
+</code></pre></div>
+<p>2.<code>&lt;c:forEach&gt;</code> var属性定义一个键 键对应循环体的每个值，var属性其实就是一个缓冲引用  </p>
+<div class="highlight"><pre><span></span><code> &lt;c:forEach var=&quot;i&quot; begin=&quot;1&quot; end=&quot;10&quot; step=&quot;2&quot;&gt;
+ &lt;LI&gt;i = ${i}&lt;/LI&gt;
+ &lt;/c:forEach&gt;
+&lt;% 
+java.util.List list = new java.util.ArrayList();
+list.add(&quot;One&quot;);
+list.add(&quot;Two&quot;);
+list.add(&quot;Three&quot;);
+list.add(&quot;Four&quot;);
+list.add(&quot;Five&quot;);
+request.setAttribute(&quot;list&quot;, list);
+%&gt;
+&lt;UL&gt;
+ &lt;c:forEach var=&quot;item&quot; items=&quot;${list}&quot;&gt;
+ &lt;LI&gt;${item}&lt;/LI&gt;
+ &lt;/c:forEach&gt;
+&lt;/UL&gt;
+</code></pre></div>
+<p>3.<code>&lt;c:if&gt;</code><br />
+由test来测试</p>
+<div class="highlight"><pre><span></span><code> &lt;c:if test=&quot;${i &gt; 3}&quot;&gt;
+  (greater than 3)
+  &lt;/c:if&gt;
+</code></pre></div>
+<h1 id="19">19.过滤器<a class="headerlink" href="#19" title="Permanent link">&para;</a></h1>
+<blockquote>
+<ul>
+<li>过滤器可以过滤请求</li>
+<li>比如：在用户未登录之前，不让用户访问需要登录才能看到的资源</li>
+<li>比如：用户发送请求时，统一设置字符集 ，解决中文乱码问题</li>
+<li><strong>过滤器可以获取请求参数，可以对请求进行判断和处理</strong></li>
+<li>符合条件就放行</li>
+<li>
+<p>不符合条件可以重定向到其他资源</p>
+</li>
+<li>
+<p>过滤器可以过滤响应</p>
+</li>
+<li>
+<p>放行请求后，可以获取响应信息 可以对响应信息进行判断和处理</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="_3">配置过滤器<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>有两种方式：分别是使用 配置文件(web.xml) 和 使用注解</strong></p>
+<ul>
+<li>web.xml</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;filter&gt;</span>
+<span class="w">  </span><span class="nt">&lt;filter-name&gt;</span>filter1<span class="nt">&lt;/filter-name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;filter-class&gt;</span>cn.wang.filter.FilterDemo1<span class="nt">&lt;/filter-class&gt;</span>
+<span class="nt">&lt;/filter&gt;</span>
+<span class="nt">&lt;filter-mapping&gt;</span>
+<span class="w">  </span><span class="nt">&lt;filter-name&gt;</span>filter1<span class="nt">&lt;/filter-name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;url-pattern&gt;</span>/*<span class="nt">&lt;/url-pattern&gt;</span>
+<span class="nt">&lt;/filter-mapping&gt;</span>
+</code></pre></div>
+</blockquote>
+<ul>
+<li>注解</li>
+</ul>
+<p>@WebFilter(filterName = "charsetFilter", urlPatterns = "/*")</p>
+<h3 id="_4">过滤器的实现<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ol>
+<li>写一个普通类,实现filter接口</li>
+<li>重写接口中的抽象方法(指定拦截规则)</li>
+<li>在web.xml文件中注册过滤器或使用注解</li>
+<li>
+<p>过滤器执行顺序问题</p>
+</li>
+<li>
+<p>使用配置文件</p>
+<ul>
+<li>先配置的先执行，后配置的后执行</li>
+</ul>
+</li>
+<li>使用注解<ul>
+<li>根据filterName的字符顺序排序</li>
+</ul>
+</li>
+</ol>
+<h3 id="_5">过滤器的生命周期<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ol>
+<li>构造方法 web容器启动 1次</li>
+<li>init方法 对象创建后 1次</li>
+<li>doFilter方法 请求被拦截后 N次</li>
+<li>destroy方法 web容器关闭 1次</li>
+</ol>
+<h1 id="20">20.监听器<a class="headerlink" href="#20" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>监听器是用来监听你的web应用，监听许多信息的初始化、销毁、增加、修改、删除等等</strong></p>
+<ul>
+<li>对监听器的划分</li>
+<li>按监听的对象划分，监听器可以分为：ServletContext对象监听器、HttpSession对象监听器、ServletRequest对象监听器。</li>
+<li>安监听的事件划分，监听器可以分为：对象自身的创建和销毁的监听器、对象中属性的创建和消除的监听器、session中的某个对象的状态变化的监听器。</li>
+<li>注册监听器</li>
+</ul>
+<div class="highlight"><pre><span></span><code>#通过注解的方式注册监听器
+@WebListener
+
+#在web.xml中注册监听器<span class="w">   </span>
+<span class="nt">&lt;listener&gt;</span>
+<span class="nt">&lt;listener-class&gt;</span>com.mrlang.listener.MyContextListener<span class="nt">&lt;/listener-class&gt;</span>
+<span class="nt">&lt;/listener&gt;</span>
+</code></pre></div>
+</blockquote>
+<div class="highlight"><pre><span></span><code>2、上下文监听ServletContext、Session监听、session中属性监听
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">//上下文监听ServletContext</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyContextListener</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">ServletContextListener</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">contextInitialized</span><span class="p">(</span><span class="n">ServletContextEvent</span><span class="w"> </span><span class="n">servletContextEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//获取到上下文对象</span>
+<span class="w">        </span><span class="n">ServletContext</span><span class="w"> </span><span class="n">application</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">servletContextEvent</span><span class="p">.</span><span class="na">getServletContext</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;上下文初始化&quot;</span><span class="o">+</span><span class="n">application</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">contextDestroyed</span><span class="p">(</span><span class="n">ServletContextEvent</span><span class="w"> </span><span class="n">servletContextEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;上下文销毁&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//session监听</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MySessionListener</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">HttpSessionListener</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sessionCreated</span><span class="p">(</span><span class="n">HttpSessionEvent</span><span class="w"> </span><span class="n">httpSessionEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;session创建&quot;</span><span class="o">+</span><span class="n">httpSessionEvent</span><span class="p">.</span><span class="na">getSession</span><span class="p">().</span><span class="na">getId</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sessionDestroyed</span><span class="p">(</span><span class="n">HttpSessionEvent</span><span class="w"> </span><span class="n">httpSessionEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;session销毁&quot;</span><span class="o">+</span><span class="n">httpSessionEvent</span><span class="p">.</span><span class="na">getSession</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//session中属性监听</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MySessionAttributeListener</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">HttpSessionAttributeListener</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">attributeAdded</span><span class="p">(</span><span class="n">HttpSessionBindingEvent</span><span class="w"> </span><span class="n">httpSessionBindingEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;session属性添加：&quot;</span><span class="o">+</span><span class="n">httpSessionBindingEvent</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">attributeRemoved</span><span class="p">(</span><span class="n">HttpSessionBindingEvent</span><span class="w"> </span><span class="n">httpSessionBindingEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;session属性移除：&quot;</span><span class="o">+</span><span class="n">httpSessionBindingEvent</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">attributeReplaced</span><span class="p">(</span><span class="n">HttpSessionBindingEvent</span><span class="w"> </span><span class="n">httpSessionBindingEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;session属性替换：&quot;</span><span class="o">+</span><span class="n">httpSessionBindingEvent</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>三、监听器的应用</strong></p>
+<p>在线人数的统计：</p>
+<p>1、先获取容器中的数量计数器，如果没有，创建后存进去</p>
+<p>2、每创建一个session，计数器加1</p>
+<p>3、每销毁一个session，计数器减1</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//应用程序、网站监听器：统计在线人数</span>
+<span class="nd">@WebListener</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">OnlineListener</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">ServletContextListener</span><span class="p">,</span><span class="w"> </span><span class="n">HttpSessionListener</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ServletContext</span><span class="w"> </span><span class="n">appliction</span><span class="p">;</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">contextInitialized</span><span class="p">(</span><span class="n">ServletContextEvent</span><span class="w"> </span><span class="n">servletContextEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//获取上下文对象</span>
+<span class="w">        </span><span class="n">appliction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">servletContextEvent</span><span class="p">.</span><span class="na">getServletContext</span><span class="p">();</span>
+<span class="w">        </span><span class="c1">//是否有计数器</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">appliction</span><span class="p">.</span><span class="na">getAttribute</span><span class="p">(</span><span class="s">&quot;count&quot;</span><span class="p">)</span><span class="o">==</span><span class="kc">null</span><span class="p">){</span>
+<span class="w">            </span><span class="c1">//存进去，只执行一次</span>
+<span class="w">            </span><span class="n">appliction</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;count&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">contextDestroyed</span><span class="p">(</span><span class="n">ServletContextEvent</span><span class="w"> </span><span class="n">servletContextEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sessionCreated</span><span class="p">(</span><span class="n">HttpSessionEvent</span><span class="w"> </span><span class="n">httpSessionEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//获取原来的计数器的值</span>
+<span class="w">        </span><span class="n">Integer</span><span class="w"> </span><span class="n">count</span><span class="o">=</span><span class="n">Integer</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">appliction</span><span class="p">.</span><span class="na">getAttribute</span><span class="p">(</span><span class="s">&quot;count&quot;</span><span class="p">).</span><span class="na">toString</span><span class="p">());</span>
+<span class="w">        </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">//存进去</span>
+<span class="w">        </span><span class="n">appliction</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;count&quot;</span><span class="p">,</span><span class="n">count</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sessionDestroyed</span><span class="p">(</span><span class="n">HttpSessionEvent</span><span class="w"> </span><span class="n">httpSessionEvent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Integer</span><span class="w"> </span><span class="n">count</span><span class="o">=</span><span class="n">Integer</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">appliction</span><span class="p">.</span><span class="na">getAttribute</span><span class="p">(</span><span class="s">&quot;count&quot;</span><span class="p">).</span><span class="na">toString</span><span class="p">());</span>
+<span class="w">        </span><span class="n">count</span><span class="o">--</span><span class="p">;</span>
+<span class="w">        </span><span class="n">appliction</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;count&quot;</span><span class="p">,</span><span class="n">count</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h1 id="21cookie-session">21.Cookie &amp; Session<a class="headerlink" href="#21cookie-session" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>cookie就是存储在用户本地终端上的数据，也可以说<strong>cookie就是表示存储数据的一种格式。</strong></p>
+<p>那我先说说cooike出现的原因吧：</p>
+<blockquote>
+<p>在网站中<strong>，HTTP请求是无状态的</strong>，也就是说即使第一次与服务器连接后并且用户登录成功后，第二次访问访问服务器时，服务器依然不知道是哪个用户发过来的请求，而<strong>cookie的请求就会为了解决这一问题</strong>，当用户第一次登录时服务器会给浏览器返回一个cookie，浏览器将此保存在本地，当用户第二次发出请求时，就会自动的把上次存储的cookie发送给服务器，服务器通过浏览器携带的数据来判断用户。</p>
+</blockquote>
+<h3 id="cookie">cookie的机制：<a class="headerlink" href="#cookie" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>cookie是由服务端生成的，发送给客户端的特殊信息(cookie信息存放在http的响应头中)，当客户端收到服务端发送来的信息时，浏览器将会把cookie的(key/value)保存到本地的一个文件当中，而客户端每次向服务端发送请求时都会带上这些特殊的信息。</p>
+</blockquote>
+<p>这里要强调一点</p>
+<p><strong>cookie是由服务端产生的，而是保存在客户端的</strong></p>
+<h3 id="cookie_1">cookie的主要用途：<a class="headerlink" href="#cookie_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>1.cookie的最典型的用途是判定用户是否已经登陆过此网站，或者是提示用户是否下次登录时保存某些信息以便于下次登录时方便使用。</p>
+<p>2.类似于"购物车"类型，用户在一段时间内在一家网站的不同页面选择不同的商品，这些信息都会保存在cookie中，以便于付款时使用。</p>
+</blockquote>
+<h3 id="cookie_2">cookie的生命周期：<a class="headerlink" href="#cookie_2" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>cookie的生命的周期是可以自己设置的如果没有去设置cookie的生命周期的话一般浏览器会默认为浏览器的会话期间，浏览器关闭cookie以将消失
+</p>
+</blockquote>
+<h3 id="cookie_3">cookie的功能特点：<a class="headerlink" href="#cookie_3" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>cookie必须在HTML文件的内容输出之前设置在客户端，一个浏览器能创建的cookie数不能超过300个，并且每个不能超过4kb，每个web站点能设置的cookie总数不能超过20个。</p>
+</blockquote>
+<h2 id="session_2">session:<a class="headerlink" href="#session_2" title="Permanent link">&para;</a></h2>
+<p>session称为“会话控制”和cookie的作用有点类似，都是为了存储用户的相关信息。也可以说是一种存储方式</p>
+<p><strong>session 是基于cookie实现的</strong></p>
+<h3 id="session_3">session的机制：<a class="headerlink" href="#session_3" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>一般来说有session的地方一定有cookie，用户通过浏览器讲信息发送到服务器中，当拿到用户的id时，并不是马上的将这些信息存在服务器当中，而是经过加密以后将这些信息存到session中，并且随机产生一个唯一的session_id,然后将session_id返回到浏览器，而这session_id将会保存在cookie当中。下一次浏览器访问服务器是浏览器会吧cookie信息发送到服务器，然后拿到cookie以后从cookie中找到session_id,通过session_id找到对应的session信息。这样可以达到识别用户的功能。</p>
+</blockquote>
+<h3 id="session_4">使用session的好处：<a class="headerlink" href="#session_4" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>1.敏感的数据不是直接发送给浏览器而是发送一个session_id,服务器将session_id和敏感数据映射存储在session中，更加安全</p>
+<p>2.session可以设置过期时间，可以保证用户的安全</p>
+</blockquote>
+<h3 id="cookiesession">cookie与session的区别：<a class="headerlink" href="#cookiesession" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>cookie数据是存放在客户端浏览器上 ，session是存放在服务器上</p>
+<p>cookie是不安全的，别人可以进行cookie进行cookie诈骗，考虑到安全应该使用session</p>
+<p>session会保存在服务器上的。当访问量变大时，会占用服务器的性能，考虑到减轻服务器的性能应该使用cookie</p>
+</blockquote>
+</blockquote>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 wang
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://space.bilibili.com/693239114" target="_blank" rel="noopener" title="Bilibili | wang" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://github.com/lovesportswang" target="_blank" rel="noopener" title="GitHub | lovesportswang" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="../../../../mkdocs/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
