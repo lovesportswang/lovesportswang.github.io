@@ -6,7 +6,7 @@ title: wang的个人履历
 > 
 > 更新于 2023.1.7
 
-[通用简历PDF](./files/cv-yxj.pdf)
+[通用简历PDF](./files/王朋飞 Java开发工程师.pdf)
 
 ## 目前
 
