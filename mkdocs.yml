@@ -66,10 +66,7 @@ nav:
       - GitHub Pages简介: bolg/Markdown/github-pages.md
   - 开发:
     - dev/index.md
-    - 编程:
-      - 推荐的java学习路线: dev/java/Java学习路线.md
-      - javaWeb:
-        - javaWeb复习笔记: dev/java/javaWeb/javaWeb.md
+    - java: dev/java/index.md
   - 转载:
     - reproduce/index.md
   - 我杂乱无章的记事本:
