@@ -69,6 +69,7 @@ nav:
     - java: dev/java/index.md
   - 转载:
     - reproduce/index.md
+    - 雷军的博客: reproduce/reprint/雷军的博客.md
   - 我杂乱无章的记事本:
     - diary/index.md
     - 随记: diary/随笔记.md
